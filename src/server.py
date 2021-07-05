@@ -77,7 +77,7 @@ async def registerConnection(websocket, path):
 
 
 loop = asyncio.get_event_loop()
-start_server = websockets.serve(registerConnection, "localhost", 8765)
+start_server = websockets.serve(registerConnection, "172.31.25.121", 8765)
 print(f'Started socket server: {start_server} ...')
 loop.run_until_complete(start_server)
 loop.run_until_complete(sendState(loop))
