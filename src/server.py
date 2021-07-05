@@ -3,7 +3,6 @@
 # WS server example
 
 import asyncio
-import time
 import websockets
 from board import Board
 import json

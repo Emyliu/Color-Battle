@@ -9,7 +9,7 @@ class Board:
         self.mode = mode
         self.colors = colors
         self.last_moved = 1
-        self.player_colors = [None, None]
+        self.player_colors = ["P1", "P2"]
         self.player_counts = [1, 1]
         self.state = [[Cell() for x in range(width)] for y in range(height)]
 
