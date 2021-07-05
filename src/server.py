@@ -14,10 +14,6 @@ websocket_clients = set()
 b = Board(10,10,0,["R","O","Y","G","B","I"])
 
 
-# This is only here because both the websockets can restart the game, so we want to
-# only restart if a move has been made.
-moveMade = False
-
 b.fill_with_color();
 
 filled = [False, False]
@@ -58,16 +54,14 @@ async def registerConnection(websocket, path):
         try:
             # This loop will keep listening on the socket until its closed. 
             async for raw_message in websocket:
-                if raw_message == "Reset" and moveMade == True:
+                if raw_message == "Reset":
                     b = Board(10,10,0,["R","O","Y","G","B","I"])
                     b.fill_with_color();
-                    moveMade = False
                 else:
                     print(f'Got: [{raw_message}] from socket [{id(websocket)}]')
                     color = raw_message[0]
                     player = int(raw_message[1])
                     b.fill(player, color)
-                    moveMade = True
 
         except websockets.exceptions.ConnectionClosedError as cce:
             websocket_clients.remove(websocket)
