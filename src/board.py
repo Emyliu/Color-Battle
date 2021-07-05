@@ -34,10 +34,8 @@ class Board:
         self.state[-1][0].player = 0
         self.state[0][-1].player = 1
 
-        self.state[-1][0].color = "P0"
-        self.state[0][-1].color = "P1"
-
-        # Set the 
+        self.player_colors[0] = self.state[-1][0].color
+        self.player_colors[1] = self.state[0][-1].color
 
     def output(self):
         return self.state

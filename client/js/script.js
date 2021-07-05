@@ -1,5 +1,5 @@
 
-let socket = new WebSocket("ws://localhost:8765");
+let socket = new WebSocket("ws://34.222.50.19:8765");
 let player_id = -1;
 MAX_SCORE = 100
 
