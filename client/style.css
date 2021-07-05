@@ -1,0 +1,17 @@
+.row { display: flex; font-size: 9.5px; text-align: center; color: red; display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cell { width: 8em; height: 8em;}
+.buttonrow { display: flex; font-size: 9.5px; text-align: center; color: red;  display: flex;
+    justify-content: center;
+    align-items: center; }
+.colorbutton { width: 75px; height: 75px; margin-top: 50px; left: 50%;}
+
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+body {
+    background-color:#DCDCDC;
+}

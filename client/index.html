@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Grid Game</title>
+</head>
+
+<body>
+    <script src="js/script.js"></script>
+    <div id="GridDisplay"></div>
+
+    <h1 id="spectator" style="visibility:hidden">You are spectating</h1>
+
+    <div class="buttonrow" id="Selector">
+        <button class="colorbutton" id="R" style="background-color:Maroon" onclick="sendColor('R')"></button>
+        <button class="colorbutton" id="O" style="background-color:darkorange" onclick="sendColor('O')"></button>
+        <button class="colorbutton" id="Y" style="background-color:yellow" onclick="sendColor('Y')"></button>
+        <button class="colorbutton" id="G" style="background-color:limegreen" onclick="sendColor('G')"></button>
+        <button class="colorbutton" id="B" style="background-color:midnightblue" onclick="sendColor('B')"></button>
+        <button class="colorbutton" id="I" style="background-color:indigo" onclick="sendColor('I')"></button>
+    </div>
+
+    <h1 id="playername"></h1>
+    <h2 id="score"></h2>
+
+</body>
+
+</html>
+
